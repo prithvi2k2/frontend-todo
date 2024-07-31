@@ -33,8 +33,8 @@ export default function App() {
       .get("http://localhost:3000/todo")
       .then(function (response) {
         // handle success
-        console.log(response);
-        setTodos(todos);
+        console.log(response.data);
+        setTodos(response.data);
         console.log(todos);
         console.log(response);
       })
