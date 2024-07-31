@@ -12,10 +12,10 @@ export default function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(input.trim().length === 0) return;
+    if (input.trim().length === 0) return;
     // Axios POST/ todo
     axios
-      .post("http://localhost:3000/todo", {text: input})
+      .post("http://localhost:3000/todo", { text: input })
       .then(function (response) {
         // handle success
         console.log(response);
@@ -33,9 +33,9 @@ export default function App() {
       .get("http://localhost:3000/todo")
       .then(function (response) {
         // handle success
-        console.log(response)
+        console.log(response);
         setTodos(todos);
-        console.log(todos)
+        console.log(todos);
         console.log(response);
       })
       .catch(function (error) {
